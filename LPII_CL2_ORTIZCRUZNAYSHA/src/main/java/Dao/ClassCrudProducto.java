@@ -1,0 +1,37 @@
+package Dao;
+
+import java.util.List;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+
+import Interface.IProductoble;
+import model.TblProductocl2;
+
+public class ClassCrudProducto implements IProductoble{
+
+	@Override
+	public void RegistrarProducto(TblProductocl2 tprod) {
+		// TODO Auto-generated method stub
+		EntityManagerFactory conex=Persistence.createEntityManagerFactory("CL2ORTIZ");
+		EntityManager emanager=conex.createEntityManager();
+		emanager.getTransaction().begin();
+		emanager.persist(tprod);
+		emanager.getTransaction().commit();
+		emanager.close();
+		
+	}
+
+	@Override
+	public List<TblProductocl2> ListadoProducto() {
+		EntityManagerFactory conex=Persistence.createEntityManagerFactory("CL2ORTIZ");
+		EntityManager emanager=conex.createEntityManager();
+		emanager.getTransaction().begin();
+		List<TblProductocl2> listado=emanager.createQuery("select e from TblProductocl2 e", TblProductocl2.class).getResultList();
+		emanager.getTransaction().commit();
+		emanager.close();
+		return listado;
+	}
+
+}

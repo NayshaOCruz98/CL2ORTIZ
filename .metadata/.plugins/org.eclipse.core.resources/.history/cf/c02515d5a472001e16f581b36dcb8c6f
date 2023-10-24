@@ -1,0 +1,83 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Registrar producvto</title>
+</head>
+<body>
+<h1>Registrar Producto</h1>
+<form action="ControladorServlet2" method="post">
+
+<table align="center">
+<tr>
+<td>color</td>
+<td><input type="text" name="color"></td>
+</tr>
+<tr>
+<td>Modelo</td>
+<td><input type="text" name="modelo"></td>
+</tr>
+<tr>
+<td>Precio</td>
+<td><input type="text" name="precio"></td>
+</tr>
+<tr>
+<td>Marca</td>
+<td><input type="text" name="marca"></td>
+</tr>
+<tr>
+<td>Fabricacion</td>
+<td><input type="text" name="fabricacion"></td>
+</tr>
+<tr>
+<td colspan="2"></td>
+<td><input type="submit" name="Registra Auto"></td>
+</tr>
+</table>
+</form>
+
+<h1 align="center">Listado de Autos</h1>
+<table align="center" border="2">
+<tr>
+<th>Codigo</th>
+<th>Color</th>
+<th>Modelo</th>
+<th>Precio</th>
+<th>Marca</th>
+<th>Fabricacion</th>
+
+<%
+List<TbAuto> ListadoAuto=(List<TbAuto>)request.getAttribute("listado");
+if(ListadoAuto!=null){
+	for(TbAuto lis:ListadoAuto){
+%>	
+<tr>
+<td>
+<%=lis.getIdauto() %>
+</td>
+<td>
+<%=lis.getColor() %>
+</td>
+<td>
+<%=lis.getModelo() %>
+</td>
+<td>
+<%=lis.getPrecio() %>
+</td>
+<td>
+<%=lis.getMarca() %>
+</td>
+<td>
+<%=lis.getFabricacion() %>
+</td>
+</tr>
+<% 
+
+	}
+}
+%>
+</table>
+</body>
+</html>

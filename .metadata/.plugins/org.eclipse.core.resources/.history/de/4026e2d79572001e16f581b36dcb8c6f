@@ -1,0 +1,7 @@
+package Interface;
+
+import model.TblProductocl2;
+
+public interface IProductoble {
+	public void RegistrarProducto(TblProductocl2 tprod);
+}

@@ -1,0 +1,5 @@
+package Interface;
+
+public interface IProductoble {
+	public void RegistrarAuto(TblProductocl2 tprod);
+}

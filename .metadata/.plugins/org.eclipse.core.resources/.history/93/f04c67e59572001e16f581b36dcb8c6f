@@ -1,0 +1,14 @@
+package Dao;
+
+import Interface.IProductoble;
+import model.TblProductocl2;
+
+public class ClassCrudProducto implements IProductoble{
+
+	@Override
+	public void RegistrarProducto(TblProductocl2 tprod) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

@@ -1,0 +1,23 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Ventana Usuario</title>
+</head>
+<body>
+<h2>Ingresar al sistema</h2>
+
+<form action="ControladorServlet" method="post">
+
+<table align="center">
+
+</table>
+</form>
+
+
+
+</form>
+</body>
+</html>

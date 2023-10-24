@@ -1,0 +1,31 @@
+package TestEntidades;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+
+import model.TblProductocl2;
+
+public class TestProducto {
+	public static void main(String[] args) {
+		//establecemos conexion con la entidad de persistencia 
+		EntityManagerFactory emana =Persistence.createEntityManagerFactory("CL2ORTIZ");
+		//manejamos las entidades
+		EntityManager eman = emana.createEntityManager();
+		eman.getTransaction().begin();
+		//instanciamos las respectivas entidades
+		TblProductocl2 tproducto = new TblProductocl2();
+		
+		//REGISTRAMOS DATOS A LA TABLA PRODUCTO
+		tproducto.setNombrecl2("Arroz");
+		tproducto.setPrecioventacl2(5.40);
+		tproducto.setPreciocompracl2(2.80);
+		tproducto.setEstadocl2("vigente");
+		tproducto.setDescripcioncl2("Producto mas vendido");
+		eman.persist(tproducto);
+		System.out.println("datos registrados");
+		eman.getTransaction().commit();
+		eman.close();
+		
+	}
+}
