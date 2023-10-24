@@ -8,7 +8,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Registrar producto</title>
 </head>
-<body>
+<body bgcolor="#C0C0C0">
 <h1 align="center">Registrar Producto</h1>
 <form action="ControladorServletprod" method="post">
 
@@ -29,6 +29,7 @@
 <td>Estado</td>
 <td>
 <select name="estado">
+	<option>--Seleccione--</option>
 	<option>Vigente</option>
 	<option>Agotado</option>
 </select>
@@ -38,9 +39,9 @@
 <td>Descripcion</td>
 <td><input type="text" name="descrip"></td>
 </tr>
-<tr>
-<td colspan="2" ></td>
-<td align="center"><input type="submit" name="Registra Producto" value="Registrar">
+<tr >
+<td colspan="2" align="center" >
+<input type="submit" name="Registra Producto" value="Registrar">
 </td>
 </tr>
 </table>
@@ -88,5 +89,7 @@ if(Listadoproducto!=null){
 }
 %>
 </table>
+
 </body>
+
 </html>

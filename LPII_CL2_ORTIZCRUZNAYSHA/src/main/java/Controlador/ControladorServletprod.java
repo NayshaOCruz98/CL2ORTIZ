@@ -60,9 +60,7 @@ public class ControladorServletprod extends HttpServlet {
 		request.setAttribute("listado", listarproducto);
 		request.getRequestDispatcher("/RegistrarProducto.jsp").forward(request, response);
 		
-		
-		
-		
+				
 	}
 
 }

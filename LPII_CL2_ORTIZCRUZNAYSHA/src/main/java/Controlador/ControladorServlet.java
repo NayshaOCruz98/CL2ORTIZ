@@ -39,17 +39,23 @@ public class ControladorServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		//doGet(request, response);
-		String usuario=request.getParameter("usuario");
-		String password=request.getParameter("password");
-		
-		TblUsuariocl2 tuser = new TblUsuariocl2();
 		ClassCrudUsuario cruser = new ClassCrudUsuario();
 		
-		tuser.setUsuariocl2(usuario);
-		tuser.setPasswordcl2(password);
-		cruser.RegistrarUsuario(tuser);
-		request.getRequestDispatcher("/index.jsp").forward(request, response);
-		System.out.println("Datos registrados");
+		String usuario=request.getParameter("usuario");
+		String password=request.getParameter("password");
+
+		
+		if(cruser.ValidarUsuario(usuario, password)){
+			request.getRequestDispatcher("/RegistrarProducto.jsp").forward(request, response);
+		}else{
+			response.sendRedirect("/errordeingreso.jsp");
+		}
+		System.out.println("Bienvenido al sistema");
+
+
+	
+		
+
 		
 	}
 
