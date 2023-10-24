@@ -23,27 +23,34 @@
 </tr>
 <tr>
 <td>Precio compra</td>
-<td><input type="text" name="preciocompra"></td>
+<td><input type="text" name="PrecioCompra"></td>
 </tr>
 <tr>
 <td>Estado</td>
-<td><input type="text" name="estado"></td>
+<td>
+<select name="estado">
+	<option>Vigente</option>
+	<option>Agotado</option>
+</select>
+</td>
 </tr>
 <tr>
 <td>Descripcion</td>
 <td><input type="text" name="descrip"></td>
 </tr>
 <tr>
-<td colspan="2" align="center">
-<input type="submit" name="Registra Producto">
+<td colspan="2" ></td>
+<td align="center"><input type="submit" name="Registra Producto" value="Registrar">
 </td>
 </tr>
 </table>
 </form>
 <!--  <td><input type="submit" name="Registra Producto"></td>-->
+
 <h1 align="center">Listado de productos</h1>
 <table align="center" border="2">
 <tr>
+<th>Codigo</th>
 <th>Nombre</th>
 <th>Precio Venta</th>
 <th>Precio Compra</th>

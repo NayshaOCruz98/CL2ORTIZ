@@ -5,6 +5,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import Dao.ClassCrudUsuario;
 import model.TblUsuariocl2;
@@ -47,8 +48,8 @@ public class ControladorServlet extends HttpServlet {
 		tuser.setUsuariocl2(usuario);
 		tuser.setPasswordcl2(password);
 		cruser.RegistrarUsuario(tuser);
-		System.out.println("Datos registrados");
 		request.getRequestDispatcher("/index.jsp").forward(request, response);
+		System.out.println("Datos registrados");
 		
 	}
 

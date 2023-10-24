@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Ventana Usuario</title>
 </head>
-<body>
+<body bgcolor="#c5dec9">
 <h2 align="center">Ingresar al sistema</h2>
 
 <form action="ControladorServlet" method="post">
@@ -19,20 +19,16 @@
 </tr>
 <tr>
 <td>Contraseña</td>
-<td><input type="text" name="usuario"></td>
+<td><input type="text" name="password"></td>
 </tr>
 <tr>
 <td colspan="2" align="center">
-<a href="ControladorServletprod" > <button>Ingresar</button></a></td>
+<input type="submit" value="Ingresar"></td>
 </td>
 </tr>
 
-
-
 </table>
 </form>
-
-
 
 </form>
 </body>

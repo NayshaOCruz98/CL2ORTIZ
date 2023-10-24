@@ -41,8 +41,8 @@ public class ControladorServletprod extends HttpServlet {
 		// TODO Auto-generated method stub
 		//doGet(request, response);
 		String nombre=request.getParameter("nombre");
-		Double precioV=Double.parseDouble(request.getParameter("precioventa"));
-		Double precioC=Double.parseDouble(request.getParameter("PrecioCompra"));
+		double precioV=Double.parseDouble(request.getParameter("precioventa"));
+		double precioC=Double.parseDouble(request.getParameter("PrecioCompra"));
 		String estado=request.getParameter("estado");
 		String descrip=request.getParameter("descrip");
 		
